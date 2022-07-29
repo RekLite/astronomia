@@ -1,0 +1,37 @@
+body {
+  background-color: #ffffff;
+  margin:0;
+  padding:0;
+}
+
+nav {
+  display: none;
+}
+
+header {
+  display: none;
+}
+
+aside {
+  display:none;
+}
+
+footer {
+  display: none;
+}
+
+.section_accueil {
+  border:none;
+}
+
+.section_presentation {
+  border:none;
+}
+
+.systeme {
+  border:none;
+}
+
+.banner_livre {
+  display:none;
+}

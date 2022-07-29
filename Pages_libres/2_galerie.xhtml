@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Astronomia - Galerie</title>
+   	<script type="text/javascript" src="./Scripts/galerie.js"></script>
+    <link rel="stylesheet" href="./Styles/style.css" charset="utf-8" />
+    <link rel="icon" href="./images/star.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="./Styles/print.css" media="print"/>
+</head>
+
+<body id="galerie_body">
+    <header>
+        <div class="banner">
+        <img class="img_banner" src="./Images/cometary_banner.jpg"/>
+            <h1 class="titre_galerie"><a class="logo" href="../accueil.xhtml">galerie.</a></h1>
+        </div>
+    </header>
+    <nav>
+        <div>
+            <a href="#top" id="bouton_top" class="bouton"></a>
+            <a href="./3_inscription.xhtml" id="bouton_right" class="bouton"></a>
+            <a href="./1_presentation.xhtml" id="bouton_left" class="bouton"></a>
+        </div>
+    </nav>
+    <nav id="nav_galerie" class="nav">
+        <ul>
+            <li><a href="../accueil.xhtml">Accueil</a></li>
+            <li class="dropdown"><a class="sous-menu actif" href="#">Partie Libre</a>     
+                <ul class="dropdown-content">
+                    <li><a href="./1_presentation.xhtml">Présentation</a></li>
+                    <li><a class="actif" href="#">Galerie</a></li>
+                    <li><a href="./3_inscription.xhtml">Inscription</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#">Partie Imposée</a>
+                <ul class="dropdown-content" id="livre2">
+                    <li style="box-sizing: border-box;"><a class="sous-menu" href="../Page_imposée/Livre_Petit/livre_v2.xhtml">Livre</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <section class="section_galerie">
+        <div id="myDIV">
+            <h1 class="hubble">Photos prises par le téléscope Hubble</h1>
+                <p>Voici <b class="nom" id="id_quoi">notre Voie Lactée ! Cette carte de notre galaxie (la plus détaillée jamais réalisé) a été réalisée par le téléscope Gaia en avril 2018.</b></p>
+                <p><img class="image" id="id_image" src="./Images/voie_lactee.png" height="570px"/></p>
+                <div class="methode">
+                    <ul>
+                    <li><label>Méthode 1 :</label>
+                        <input type="button" value="Mars" onclick="changeImageM1('./Images/mars.png', 'la planète Mars ! Prise le 26 juillet 2018.')"/>
+                        <input type="button" value="Saturne" onclick="changeImageM1('./Images/saturne.png', 'Saturne ! Prise le 26 juillet 2018.')"/></li>
+                            <br/>
+                    <li><label>Méthode 2 :</label>
+                        <input type="button" value="Nébuleuse du Lagon" onclick="changeImageM2('id_image', 'id_quoi', './Images/nebuleuse_lagon_visible.png', 'la nébuleuse du Lagon ! Prise le 19 avril 2018.')"/>
+                        <input type="button" value="Nébuleuse de l'oeil du chat" onclick="changeImageM2('id_image', 'id_quoi', './Images/nebuleuse_lagon_visible2.png', 'la nébuleuse planétaire de l\'oeil de chat ! Prise en septembre 2004.')"/></li>
+                            <br/>
+                    <li><label>Méthode 3 :</label>
+                        <input type="button" value="Galaxie du Sombrero" onclick="changeImageM3('./Images/galaxie_sombrero.jpg', 'la galaxie du Sombrero ! Prise en octobre 2003.')"/>
+                        <input type="button" value="Galaxie du Tourbillon" onclick="changeImageM3('./Images/galaxie_tourbillon.jpg', 'la galaxie du Tourbillon ! Prise en avril 2005.')"/></li>
+                    </ul>
+                </div>
+                    <div>
+                        <input class="bouton_init" type="button" value="Remise à l'état initial" onclick="changeImageM3('./Images/voie_lactee.png', 'notre Voie Lactée ! Cette carte de notre galaxie (la plus détaillée jamais réalisé) a été réalisée par le téléscope Gaia en avril 2018.')"/>
+                    </div>
+                            <br/>
+        </div>
+        <div>
+            <img onmouseover="changeImageM3('./Images/voie_lactee.png', 'notre Voie Lactée ! Cette carte de notre galaxie (la plus détaillée jamais réalisé) a été réalisée par le téléscope Gaia en avril 2018.')" src="./Images/voie_lactee.png" alt="Voie Lactée" height="80px" />
+            <img onmouseover="changeImageM3('./Images/mars.png', 'la planète Mars ! Prise le 26 juillet 2018.')" src="./Images/mars.png" alt="Mars" height="80px" />
+            <img onmouseover="changeImageM3('./Images/saturne.png', 'Saturne ! Prise le 26 juillet 2018.')" src="./Images/saturne.png" alt="Saturne" height="80px" />
+            <img onmouseover="changeImageM3('./Images/nebuleuse_lagon_visible.png', 'la nébuleuse du Lagon ! Prise le 19 avril 2018.')" src="./Images/nebuleuse_lagon_visible.png" alt="Nebuleuse du lagon" height="80px" />
+            <img onmouseover="changeImageM3('./Images/nebuleuse_lagon_visible2.png', 'la nébuleuse planétaire de l\'oeil de chat ! Prise en septembre 2004.')" src="./Images/nebuleuse_lagon_visible2.png" alt="Nebuleuse de l'oeil du chat" height="80px" />
+            <img onmouseover="changeImageM3('./Images/galaxie_sombrero.jpg', 'la galaxie du Sombrero ! Prise en octobre 2003.')" src="./Images/galaxie_sombrero.jpg" alt="Galaxie du Sombrero" height="80px" />
+            <img onmouseover="changeImageM3('./Images/galaxie_tourbillon.jpg', 'la galaxie du Tourbillon ! Prise en avril 2005.')" src="./Images/galaxie_tourbillon.jpg" alt="Galaxie du Tourbillon" height="80px"/>
+      </div>
+    </section>
+
+  <script>
+
+    var bodyTag = document.getElementById('myDIV');
+    var p1Tag   = bodyTag.childNodes[3];
+    var bTag    = p1Tag.lastChild;
+    var p2Tag   = bodyTag.childNodes[5];
+    var imgTag  = p2Tag.firstChild;
+
+  console.log("p1Tag  : "+ p1Tag.innerHTML);
+  console.log("bTag   : "+ bTag.innerHTML);
+  console.log("imgTag : "+ imgTag.src);
+  console.log("p2Tag  : "+ p2Tag.innerHTML);
+
+  document.oncontextmenu = new Function("return false");
+
+  document.body.addEventListener("contextmenu", function changeCouleurDeFond(){
+    var r = Math.floor((Math.random() * 256));
+    var g = Math.floor((Math.random() * 256));
+    var b = Math.floor((Math.random() * 256));
+    console.log(r,g,b);
+    var color = 'rgb'+'('+r+','+g+','+b+')';
+    console.log(color);
+    document.body.style.backgroundColor = color;
+  });
+
+  </script>
+</body>
+</html>

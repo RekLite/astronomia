@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Astronomia - Inscription</title>
+   	<script type="text/javascript" src="./Scripts/formulaire.js"></script>
+   	<link href="./Styles/formulaire.css" rel="stylesheet" />
+    <link rel="icon" href="./Images/star.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"/> 
+    <link rel="stylesheet" type="text/css" href="./Styles/print.css" media="print"/>
+</head>
+
+<body>
+    <header>
+        <div class="banner">
+        <img class ="img_banner" src="./Images/nuage_banner.jpg"/>
+            <h1 class="titre"><a class="logo" href="../accueil.xhtml">inscription</a></h1>
+        </div>
+    </header>
+    <nav>
+        <div>
+            <a href="#top" id="bouton_top" class="bouton"></a>
+            <a href="../accueil.xhtml" id="bouton_right" class="bouton"></a>
+            <a href="./2_galerie.xhtml" id="bouton_left" class="bouton"></a>
+        </div>
+    </nav>
+    <nav id="nav_inscription" class="nav">
+        <ul>
+            <li><a href="../accueil.xhtml">Accueil</a></li>
+            <li class="dropdown"><a class="sous-menu actif" href="#">Partie Libre</a>     
+                <ul class="dropdown-content">
+                    <li><a href="./1_presentation.xhtml">Présentation</a></li>
+                    <li><a href="./2_galerie.xhtml">Galerie</a></li>
+                    <li><a class="actif" href="#">Inscription</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#">Partie Imposée</a>
+                <ul class="dropdown-content" id="livre2">
+                    <li><a class="sous-menu" href="../Page_imposée/Livre_Petit/livre_v2.xhtml">Livre</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <section>
+    <h1>Formulaire d'inscription</h1>
+    <form method="get" action="https://httpbin.org/get">
+        <fieldset class="identite">
+      		<legend><b>Identité</b></legend>
+        <div class="block2">
+    		<label for="f_civilite">&#160;&#160;&#160;&#160;&#160;&#160;Civilité :
+      			<select name="iden_civilite" id="f_civilite">
+      				<option value="monsieur">Mr.</option>
+      				<option value="madame">Mme</option>
+      			</select>
+      			</label>
+     		<br />
+        <div class="block">
+        		<label for="f_prenom">Prénom :</label>
+        		<input type="text" name="iden_prenom" id="f_prenom" />
+      	 	<br />
+     	 		<label for="f_nom">Nom :</label>
+       	 		<input type="text" name="iden_nom" id="f_nom" />
+      		<br />
+      	</div>
+        		<label for="f_date">Date de naissance :</label>
+        		<input type="text" name="iden_date" id="f_date" placeholder="jj/mm/aaaa" />
+     	  	<br />
+     	<div class="block">
+        	<label for="f_mail">Email :</label>
+        	<input type="email" name="iden_email" id="f_mail" />
+        </div>
+    </div>
+        </fieldset>
+
+        <fieldset>
+        	<legend><b>Adresse de facturation</b></legend>
+        <div class="block block2">
+        		<label for="f_adresse">Adresse :</label>
+        		<input type="text" name="fact_adresse" id="f_adresse" />
+        	<br />
+        		<label for="f_code_postal">Code Postal :</label>
+        		<input type="number" max="98834" name="fact_code_postal" id="f_code_postal" />
+        	<br />
+        		<label for="f_ville">Ville :</label>
+        		<input type="text" name="fact_ville" id="f_ville" />
+        </div>
+        </fieldset>
+
+        <fieldset>
+        	<legend><b>Adresse de livraison</b></legend>
+            <div class="block2">
+        		<label for="f_idem">Idem que facturation :</label>
+        		<input type="checkbox" id="f_idem" onclick="validate()"/>
+        	<br />
+        <div class="block">
+        		<label for="fbis_adresse">Adresse :</label>
+        		<input type="text" name="livr_adresse" id="fbis_adresse" />
+        	<br />
+        		<label for="fbis_code_postal">Code Postal :</label>
+        		<input type="number" max="98834" name="livr_code_postal" id="fbis_code_postal" />
+        	<br />
+        		<label for="fbis_ville">Ville :</label>
+        		<input type="text" name="livr_ville" id="fbis_ville"/>
+        </div>
+    </div>
+        </fieldset>
+    	<input id="envoyer" type="submit" value="Envoyer"/> 
+       </form>
+    </section>
+
+       <script>
+    		var idem = document.getElementById("f_idem");
+    		var a = document.getElementById("fbis_adresse"); 
+    		var b = document.getElementById("fbis_code_postal"); 
+    		var c = document.getElementById("fbis_ville"); 
+    		var x = document.getElementById("f_adresse");
+    		var y = document.getElementById("f_code_postal");
+    		var z = document.getElementById("f_ville");
+       </script>
+</body>
+</html>
